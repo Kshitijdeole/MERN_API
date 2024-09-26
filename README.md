@@ -1,3 +1,4 @@
+## Start Server
+```bash
 npm install
-To start
-node server.js 
+npm start
