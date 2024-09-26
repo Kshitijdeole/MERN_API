@@ -7,13 +7,13 @@ const cookieParser = require("cookie-parser"); // Adjust the path as necessary
 const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+require('dotenv').config()
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended: false }));
 app.use(cookieParser());
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://kshitijdeole2:1234@tnp.omdhths.mongodb.net/MERN_API?retryWrites=true&w=majority&appName=Tnp', {
+mongoose.connect(process.env.MONGODB_URI, {
 
 })
     .then(() => {
